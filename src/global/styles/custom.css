@@ -1,0 +1,23 @@
+@tailwind components;
+
+@layer components{
+    /*Effects*/
+    .silver{
+        @apply bg-gradient-to-tr from-stone-900 via-stone-800 to-stone-500 text-transparent bg-clip-text;
+    }
+
+    .green{
+      @apply bg-gradient-to-t from-lime-800 to-lime-500 text-transparent bg-clip-text
+    }
+
+    /*Writing*/
+    .text-title{
+        @apply silver text-2xl font-medium md:text-3xl;
+    }
+
+    /*Spacing*/
+    .mb-section{
+        @apply mb-12;
+    }
+}
+

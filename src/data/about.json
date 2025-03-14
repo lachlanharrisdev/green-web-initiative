@@ -1,0 +1,22 @@
+[
+  {
+		"title": "Hosting",
+    "description": "It all starts with responsible hosting providers. Choosing a hosting provider that is powered by clean energy is the only way to completely eliminate your website's emissions."
+	},
+	{
+		"title": "Loading Content",
+		"description": "Some websites load much more content than the user actually requires; unnecessarily high resolution pictures, pre-loading links & too many font variants all contribute. Learn more in the docs"
+	},
+  {
+		"title": "Accessibility",
+		"description": "A green future is a green future for everyone. Designing websites without compatibility with screen readers, with low contrast ratios or many vibrant colours will stop some from using your website. Learn more in the docs."
+	},
+  {
+    "title": "Integrations",
+		"description": "You may design a green website, but your booking system, user authentication, javascript libraries & more may not be. Choose your providers wisely, and learn more in the docs."
+	},
+    {
+		"title": "Content",
+		"description": "Show to the world you care about the environment! Show your users how little CO2 your page emits. But don't bother if you're a petroleum company."
+	}
+]
