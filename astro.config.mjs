@@ -12,6 +12,6 @@ export default defineConfig({
       description: "Teaching developers how to produce, convert & support websites that are built for the future"
     }
   )],
-  site : "https://numonu.github.io",
-  base : ""
+  site : "https://lachlanharrisdev.github.io",
+  base : "/green-web-initiative"
 });
