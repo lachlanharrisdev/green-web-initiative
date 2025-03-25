@@ -1,12 +1,14 @@
 ---
 import About from "../components/sections/About.astro";
-import Contact from "../components/sections/Contact.astro";
+//import Contact from "../components/sections/Contact.astro";
 import Footer from "../components/sections/Footer.astro";
 import Header from "../components/sections/Header.astro";
 import Hero from "../components/sections/Hero.astro";
 import Summary from "../components/sections/Summary.astro";
 import Wrapper from "../components/utils/Wrapper.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
+
+import 'aos/dist/aos.css';
 ---
 
 <html lang="en">
@@ -15,7 +17,7 @@ import BaseLayout from "../layout/BaseLayout.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Luxury Architect</title>
+		<title>Green Web Initiative</title>
 	</head>
 	<body>
 		<BaseLayout>
@@ -27,6 +29,32 @@ import BaseLayout from "../layout/BaseLayout.astro";
         {/*<Contact />*/}
 				<Footer />
 			</Wrapper>
-		</BaseLayout>
+    </BaseLayout>
+
+    <script>
+      import AOS from "aos";
+      AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 100, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 300, // values from 0 to 3000, with step 50ms
+  easing: 'ease-out-quart', // default easing for AOS animations
+  once: true, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+    </script>
 	</body>
 </html>

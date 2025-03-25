@@ -8,10 +8,13 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   integrations: [tailwind(), starlight(
     {
-      title: "Green Web Design",
+      title: "Green Web Initiative",
+      customCss: [
+        './src/tailwind.css',
+      ],
       description: "Teaching developers how to produce, convert & support websites that are built for the future"
     }
   )],
   site : "https://lachlanharrisdev.github.io",
-  base : "/green-web-initiative"
+  base : ""
 });

@@ -1,5 +1,3 @@
-
-
 ---
 title: "My Documentation"
 description: "This is a getting started guide of my documentation."

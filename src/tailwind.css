@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode colors. */
+:root {
+	--sl-color-accent-low: #072d00;
+	--sl-color-accent: #247f00;
+	--sl-color-accent-high: #aad7a0;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #efeded;
+	--sl-color-gray-2: #cac8c7;
+	--sl-color-gray-3: #a7a3a1;
+	--sl-color-gray-4: #5b5756;
+	--sl-color-gray-5: #3b3736;
+	--sl-color-gray-6: #292625;
+	--sl-color-black: #191817;
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #c0e2b8;
+	--sl-color-accent: #165800;
+	--sl-color-accent-high: #0d3e00;
+	--sl-color-white: #191817;
+	--sl-color-gray-1: #292625;
+	--sl-color-gray-2: #3b3736;
+	--sl-color-gray-3: #5b5756;
+	--sl-color-gray-4: #8e8a89;
+	--sl-color-gray-5: #c3c1c1;
+	--sl-color-gray-6: #efeded;
+	--sl-color-gray-7: #f7f6f6;
+	--sl-color-black: #ffffff;
+}
