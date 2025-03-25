@@ -15,6 +15,6 @@ export default defineConfig({
       description: "Teaching developers how to produce, convert & support websites that are built for the future"
     }
   )],
-  site : "https://lachlanharrisdev.github.io",
+  site : "https://lachlanharrisdev.github.io/green-web-initiative/",
   base : ""
 });
