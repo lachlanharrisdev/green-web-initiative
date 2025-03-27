@@ -1,0 +1,52 @@
+---
+interface Props {
+  src: string;
+  alt?: string;
+  width?: string;
+  height?: string;
+  speed?: number;
+  className?: string;
+  borderRadius?: string;
+}
+
+const {
+  src,
+  alt = "Parallax image",
+  width = "170%", 
+  height = "100%",
+  speed = 0.3,
+  className = "",
+  borderRadius = ""
+} = Astro.props;
+
+const id = `parallax-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+<div 
+  class={`relative object-cover flex overflow-hidden ${className} items-center justify-center align-center`} 
+  style={`${borderRadius ? `border-radius: ${borderRadius};` : ""}; width: 100%; height: 100%;`}
+>
+  <img 
+    id={id}
+    class={`absolute flex w-[${width}]`}
+    src={src} 
+    alt={alt}
+  />
+</div>
+
+<script define:vars={{ id, speed }}>
+  // Initialize the parallax effect for this specific image
+  // Use requestAnimationFrame for smooth performance with Lenis
+  function updateParallax() {
+    const element = document.getElementById(id);
+    if (element) {
+      // window.pageYOffset is more compatible than window.scrollY
+      let scrollPosition = window.pageYOffset;
+      element.style.transform = 'translateY(' + scrollPosition * speed + 'px)';
+    }
+    requestAnimationFrame(updateParallax);
+  }
+  
+  // Start the animation loop
+  requestAnimationFrame(updateParallax);
+</script>

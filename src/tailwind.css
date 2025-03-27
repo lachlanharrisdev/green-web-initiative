@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --sl-font: sans-serif;
+}
+
 /* Dark mode colors. */
 :root {
 	--sl-color-accent-low: #072d00;

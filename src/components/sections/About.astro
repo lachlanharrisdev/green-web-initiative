@@ -1,12 +1,13 @@
 ---
 import AboutAcordeon from "../utils/AboutAccordion.astro";
+import ParallaxImage from "../utils/ParallaxImage.astro";
 
 ---
 
 <section class="mb-section">
     <header class="mb-8 grid gap-4 md:grid-cols-2 md:gap-8" data-aos="fade" data-aos-delay="100">
         <h2 class="text-title">
-            BUILDING GREENER WEBSITES
+            BUILDING <span class="green">GREENER</span> WEBSITES
         </h2>
         <p class="text-sm opacity-50 md:text-base">
             
@@ -14,8 +15,16 @@ import AboutAcordeon from "../utils/AboutAccordion.astro";
     </header>
     <section class="grid gap-8 md:grid-cols-2">
         <AboutAcordeon open={1}/>
-        <div class="w-full aspect-square rounded-br-[10rem] overflow-hidden">
-            <img class="w-full h-full object-cover" src="images/buildings/arch_05.jpg" alt="some building">
+        <div class="w-full aspect-square rounded-br-[10rem] overflow-hidden drop-shadow-[0_35px_35px_rgba(80,100,0,0.2)]">
+            {/*<img class="w-full h-full object-cover" src="images/tree-pattern-2.jpg" alt="some building">*/}
+            <ParallaxImage 
+                src="images/tree-pattern-2.jpg"
+                alt="Sustainable architecture"
+                width="100%"
+                height="100%"
+                speed={0.1}
+                borderRadius="0 0 0 5"
+            />
         </div>
     </section>
 </section>
