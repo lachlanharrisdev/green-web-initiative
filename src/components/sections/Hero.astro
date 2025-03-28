@@ -1,24 +1,24 @@
 ---
 import ParallaxImage from "../utils/ParallaxImage.astro";
+import heroTrees from "../../assets/images/hero-trees.jpeg";
 ---
 
-<section class="mb-section">
+<section class="mb-section w-full">
     <h1 class="silver mb-16 text-[4rem] font-extrabold uppercase text-center leading-[4rem] md:text-[7rem] md:leading-[7rem] md:text-start" data-aos="fade-up" data-aos-delay="0">
       Engineer a <br/> <span class="green">greener</span> web
     </h1>
-    <figure>
+    <figure class="mx-0">
       <div class="relative mb-4" data-aos="fade-up" data-aos-delay="600" data-aos-easing="ease-out-quart">
         <div class="w-full flex items-center justify-center rounded-br-[6rem] h-[10rem] md:h-[30rem] overflow-hidden relative drop-shadow-[0_35px_35px_rgba(200,255,0,0.2)]">
           <div class="absolute inset-0 w-full h-full">
             <ParallaxImage 
-              src="images/hero-trees.jpeg" 
+              src={heroTrees} 
               alt="Forest landscape"
-              width="110%"
+              width="50%"
               speed={0.3}
             />
           </div>
         </div>
-        {/*<img class="border-zinc-950 absolute w-[5rem] right-[20%] bottom-0 translate-y-1/2 z-20 border-[8px] rounded-full md:w-[8rem]" src="images/another/pin.png"/>*/}
       </div>
       <figcaption class="silver uppercase font-medium text-xs md:text-base" data-aos="fade-up" data-aos-delay="600">Made by Lachlan Harris</figcaption>
     </figure>

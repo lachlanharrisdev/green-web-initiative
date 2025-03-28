@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
-  src: string;
+  src: ImageMetadata; // Updated to use ImageMetadata type for astro:assets
   alt?: string;
   width?: string;
   height?: string;
@@ -26,23 +28,31 @@ const id = `parallax-${Math.random().toString(36).substring(2, 9)}`;
   class={`relative object-cover flex overflow-hidden ${className} items-center justify-center align-center`} 
   style={`${borderRadius ? `border-radius: ${borderRadius};` : ""}; width: 100%; height: 100%;`}
 >
-  <img 
+  <Image 
     id={id}
     class={`absolute flex w-[${width}]`}
     src={src} 
     alt={alt}
+    style="position: absolute;"
+    loading="lazy"
   />
 </div>
 
 <script define:vars={{ id, speed }}>
   // Initialize the parallax effect for this specific image
-  // Use requestAnimationFrame for smooth performance with Lenis
   function updateParallax() {
     const element = document.getElementById(id);
     if (element) {
-      // window.pageYOffset is more compatible than window.scrollY
-      let scrollPosition = window.pageYOffset;
-      element.style.transform = 'translateY(' + scrollPosition * speed + 'px)';
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Calculate the parallax effect only when the element is in the viewport
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        const scrollPosition = (rect.top - windowHeight) * speed; // Adjusted to ensure proper positioning
+        element.style.transform = `translateY(${-scrollPosition}px)`;
+      } else {
+        element.style.transform = "translateY(0)"; // Reset position when out of viewport
+      }
     }
     requestAnimationFrame(updateParallax);
   }

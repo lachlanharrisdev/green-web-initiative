@@ -1,30 +1,31 @@
 ---
 import ParallaxImage from "../utils/ParallaxImage.astro";
+import treePattern from "../../assets/images/tree-pattern.jpg";
 ---
 
 <section class="mb-section">
   <div class="grid gap-12 md:grid-cols-2">
     <div class="flex flex-col justify-center">
       <h2 class="text-title mb-6" data-aos="fade-up">Why <span class="green">Green Web</span> Matters</h2>
-      <div class="space-y-4">
-        <p class="text-sm opacity-70 md:text-base" data-aos="fade-up" data-aos-delay="100">
+      <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-sm opacity-70 md:text-base">
           Every byte transferred, every image loaded, every server running — they all contribute to our digital carbon footprint.
         </p>
-        <p class="text-sm opacity-70 md:text-base" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-sm opacity-70 md:text-base">
           With over <span class="green font-medium">4.6 billion</span> active internet users worldwide, the energy consumed by websites alone is equivalent to the entire airline industry's emissions.
         </p>
-        <p class="text-sm opacity-70 md:text-base" data-aos="fade-up" data-aos-delay="300">
+        <p class="text-sm opacity-70 md:text-base">
           As developers, we have the power to change this trajectory.
         </p>
       </div>
     </div>
     <div class="h-[300px] md:h-auto overflow-hidden rounded-tl-[6rem] drop-shadow-[0_35px_35px_rgba(40,95,0,0.3)]" data-aos="fade-left" data-aos-delay="400">
       <ParallaxImage 
-        src="images/tree-pattern.jpg"
+        src={treePattern}
         alt="Sustainable architecture"
         width="100%"
         height="110%"
-        speed={0.15}
+        speed={0.3}
         borderRadius="0 0 0 6rem"
       />
     </div>
