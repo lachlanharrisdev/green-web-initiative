@@ -14,15 +14,6 @@ export default defineConfig({
     logo: {
       src: './src/assets/logo.svg',
     },*/
-    sidebar: [
-      {
-        label: 'Guides',
-        items: [
-          { label: 'Getting Started', link: '/docs/' },
-          { label: 'Green Hosting', link: '/docs/guides/hosting' },
-        ],
-      },
-    ],
     components: {
       // Override Starlight's components with your own custom versions if needed
     }

@@ -10,10 +10,10 @@ import WideImage from "../components/sections/WideImage.astro";
 import Goals from "../components/sections/Goals.astro";
 import Wrapper from "../components/utils/Wrapper.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
-import SmoothScroll from "../components/utils/SmoothScroll.astro";
+//import SmoothScroll from "../components/utils/SmoothScroll.astro";
 
 import 'aos/dist/aos.css';
-import 'locomotive-scroll/dist/locomotive-scroll.css';
+//import 'locomotive-scroll/dist/locomotive-scroll.css';
 ---
 
 <html lang="en">
@@ -26,7 +26,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
     </head>
     <body>
         <BaseLayout>
-      <SmoothScroll>
+      <!--<SmoothScroll>-->
           <Wrapper>
               <Header />
               <Hero />
@@ -38,16 +38,18 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
               {/*<Contact />*/}
               <Footer />
           </Wrapper>
-      </SmoothScroll>
+      <!--</SmoothScroll>-->
   </BaseLayout>
 
   <script>
     import AOS from "aos";
+    
     import { initSmoothScrolling } from "../components/utils/SmoothScroll.js";
+    
     
     document.addEventListener('DOMContentLoaded', () => {
       // First initialize smooth scrolling
-      const scroller = initSmoothScrolling();
+      //const scroller = initSmoothScrolling();
       
       // Then initialize AOS with settings that work with Locomotive Scroll
       AOS.init({

@@ -1,0 +1,127 @@
+---
+import Footer from "../../components/sections/Footer.astro";
+import Header from "../../components/sections/Header.astro";
+import Wrapper from "../../components/utils/Wrapper.astro";
+import BaseLayout from "../../layout/BaseLayout.astro";
+import 'aos/dist/aos.css';
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Privacy Policy - Green Web Initiative</title>
+    </head>
+    <body>
+        <BaseLayout>
+            <Wrapper>
+                <Header />
+                <section class="mb-section">
+                    <h1 class="silver text-4xl font-bold uppercase mb-8" data-aos="fade-up">Privacy Policy</h1>
+                    
+                    <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
+                        <div>
+                            <h2 class="text-xl font-medium mb-4 green">Introduction</h2>
+                            <p class="opacity-70">
+                                At Green Web Initiative, we respect your privacy and are committed to protecting your personal data.
+                                This privacy policy explains how we collect, use, and safeguard your information when you visit our website.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-medium mb-4 green">Information We Collect</h2>
+                            <p class="opacity-70 mb-2">
+                                We collect minimal information to reduce our digital footprint:
+                            </p>
+                            <ul class="list-disc pl-5 opacity-70 space-y-2">
+                                <li>Anonymous usage data to improve our website performance</li>
+                                <li>Information you voluntarily provide through contact forms</li>
+                                <li>Technical data such as browser type and device information</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-medium mb-4 green">How We Use Your Information</h2>
+                            <p class="opacity-70 mb-2">
+                                We use the information we collect to:
+                            </p>
+                            <ul class="list-disc pl-5 opacity-70 space-y-2">
+                                <li>Improve our website and services</li>
+                                <li>Respond to your inquiries</li>
+                                <li>Analyze usage patterns to optimize energy efficiency</li>
+                                <li>Ensure the security of our website</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-medium mb-4 green">Cookies</h2>
+                            <p class="opacity-70">
+                                We use cookies sparingly to enhance your browsing experience while minimizing environmental impact.
+                                You can set your browser to refuse all or some browser cookies, but this may prevent some parts
+                                of our website from functioning properly.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-medium mb-4 green">Third-Party Services</h2>
+                            <p class="opacity-70">
+                                We carefully select environmentally responsible third-party services. These providers may collect
+                                information as you visit our site, and they have their own privacy policies addressing how they use such information.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-medium mb-4 green">Updates to This Policy</h2>
+                            <p class="opacity-70">
+                                We may update this privacy policy from time to time. The updated version will be indicated by an
+                                updated "Revised" date and the updated version will be effective as soon as it is accessible.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h2 class="text-xl font-medium mb-4 green">Contact Us</h2>
+                            <p class="opacity-70">
+                                If you have questions about this privacy policy, please contact us at
+                                <a href="mailto:privacy@greenwebinitiative.org" class="underline hover:opacity-100">privacy@greenwebinitiative.org</a>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <Footer />
+            </Wrapper>
+        </BaseLayout>
+
+        <script>
+            import AOS from "aos";
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                AOS.init({
+                    disable: false,
+                    startEvent: 'DOMContentLoaded',
+                    initClassName: 'aos-init',
+                    animatedClassName: 'aos-animate',
+                    useClassNames: false,
+                    disableMutationObserver: false,
+                    debounceDelay: 50,
+                    throttleDelay: 99,
+                    
+                    offset: 50,
+                    delay: 0,
+                    duration: 150,
+                    easing: 'ease-out-quart',
+                    once: false,
+                    mirror: true,
+                    anchorPlacement: 'top-bottom',
+                });
+                
+                window.AOS = AOS;
+                
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 500);
+            });
+        </script>
+    </body>
+</html>

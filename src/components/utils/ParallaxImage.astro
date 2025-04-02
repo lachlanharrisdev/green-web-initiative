@@ -14,7 +14,7 @@ interface Props {
 const {
   src,
   alt = "Parallax image",
-  width = "170%", 
+  width = "120%", 
   height = "100%",
   speed = 0.3,
   className = "",
@@ -35,6 +35,7 @@ const id = `parallax-${Math.random().toString(36).substring(2, 9)}`;
     alt={alt}
     style="position: absolute;"
     loading="lazy"
+    quality="25"
   />
 </div>
 
